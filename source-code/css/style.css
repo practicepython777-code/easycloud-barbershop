@@ -1,36 +1,238 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
-    margin: 0;
+  font-family: Arial, sans-serif;
+  background: #0b0b0b;
+  color: #fff;
+  line-height: 1.6;
 }
 
-header {
-    background-color: #1f2937;
-    color: white;
-    text-align: center;
-    padding: 20px;
+a {
+  color: inherit;
+  text-decoration: none;
 }
 
-nav {
-    background-color: #374151;
-    padding: 15px;
-    text-align: center;
+.navbar {
+  background: #050505;
+  padding: 20px 8%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #222;
 }
 
-nav a {
-    color: white;
-    text-decoration: none;
-    margin: 15px;
+.logo {
+  color: #d9a520;
+  font-size: 24px;
+  font-weight: bold;
 }
 
-h2, h3, p, ul {
-    margin-left: 20px;
+.nav-links a {
+  margin-left: 28px;
+  font-weight: bold;
+  color: #fff;
 }
 
-footer {
-    background-color: #1f2937;
-    color: white;
-    text-align: center;
-    padding: 10px;
-    margin-top: 50px;
+.nav-links a:hover,
+.nav-links .active {
+  color: #d9a520;
+}
+
+.btn {
+  display: inline-block;
+  background: #d9a520;
+  color: #0b0b0b;
+  padding: 14px 26px;
+  border-radius: 5px;
+  font-weight: bold;
+  margin-top: 20px;
+}
+
+.btn-outline {
+  background: transparent;
+  color: #fff;
+  border: 2px solid #d9a520;
+}
+
+.hero {
+    min-height: 90vh;
+    background:
+        linear-gradient(rgba(0,0,0,.65), rgba(0,0,0,.75)),
+        url("../images/HERO_IMAGE.jpg");
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    padding: 0 8%;
+}
+
+.hero-content {
+  max-width: 650px;
+}
+
+.hero h1 {
+  font-size: 60px;
+  line-height: 1.1;
+  margin-bottom: 20px;
+}
+
+.gold {
+  color: #d9a520;
+}
+
+section {
+  padding: 70px 8%;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 38px;
+  margin-bottom: 40px;
+}
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 25px;
+}
+
+.card {
+  background: #151515;
+  border: 1px solid #333;
+  border-radius: 10px;
+  padding: 25px;
+  text-align: center;
+}
+
+.card h3 {
+  margin-bottom: 10px;
+}
+
+.card p {
+  color: #ccc;
+}
+
+.price {
+  color: #d9a520;
+  font-size: 22px;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+.footer {
+  background: #050505;
+  border-top: 1px solid #333;
+  text-align: center;
+  padding: 30px;
+  color: #ccc;
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .nav-links a {
+    margin: 0 10px;
+  }
+
+  .hero h1 {
+    font-size: 42px;
+  }
+}
+
+.services-section{
+    padding:80px 8%;
+    background:#111;
+    color:white;
+}
+
+.services-section h2{
+    text-align:center;
+    font-size:42px;
+    margin-bottom:50px;
+}
+
+.service-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:30px;
+}
+
+.service-card{
+    background:#1b1b1b;
+    padding:35px;
+    border-radius:12px;
+    transition:.3s;
+    border:1px solid #2b2b2b;
+}
+
+.service-card:hover{
+    transform:translateY(-8px);
+    border-color:#d4a017;
+}
+
+.service-card h3{
+    margin-bottom:15px;
+    color:#d4a017;
+}
+
+.service-card p{
+    color:#ccc;
+    line-height:1.6;
+}
+
+.service-card span{
+    display:block;
+    margin-top:20px;
+    font-size:28px;
+    font-weight:bold;
+    color:#fff;
+}
+
+footer{
+    background:#0a0a0a;
+    color:#999;
+    text-align:center;
+    padding:30px;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 28px;
+}
+
+.gallery-card {
+  background: #151515;
+  border: 1px solid #333;
+  border-radius: 12px;
+  overflow: hidden;
+  transition: 0.3s ease;
+}
+
+.gallery-card:hover {
+  transform: translateY(-8px);
+  border-color: #d9a520;
+}
+
+.gallery-card img{
+    width:100%;
+    height:380px;
+    object-fit:cover;
+}
+
+.gallery-card h3 {
+  color: #d9a520;
+  padding: 18px 18px 5px;
+}
+
+.gallery-card p {
+  color: #ccc;
+  padding: 0 18px 22px;
 }
